@@ -6,6 +6,7 @@ Visit <a href="https://console.redhat.com">Red Hat</a> and sign in or create an 
 #### 3. Select the "Local" tab on the right side.
 #### 4. Choose your operating system
 (In this guide, I’ll use Linux as an example.)
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.1%20Installation/assets/prep.png" alt="download"/>
 #### 5. Download the CRC (CodeReady Containers) archive
 wait until the download is complete.
 #### 6. Extract the downloaded file 
@@ -22,7 +23,7 @@ export PATH=$PATH:[path]/crc-linux-2.49.0-amd64
 crc version
 ```
 You should see an output similar to: :
-<img src="" alt="crc version"/>
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.1%20Installation/assets/crc_ver.png" alt="crc version"/>
 #### 9. Install required virtualization dependencies:
 ```bash
 sudo apt install -y qemu-kvm libvirt-daemon libvirt-daemon-system
@@ -36,10 +37,12 @@ sudo apt install network-manager
 ```bash
 crc setup
 ```
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.1%20Installation/assets/crc_set.png" alt="setup" />
+
 #### 11. The installation process will begin. This may take 15–20 minutes until the cluster is fully ready.
 #### 12. Verify the installation by running:
 ```bash
 crc status
 ```
 Or check the output:
-<img src="" alt="result installation"/>
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.1%20Installation/assets/crc_ver.png" alt="crc version"/>
