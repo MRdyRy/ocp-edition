@@ -5,7 +5,8 @@
 crc start
 ```
 wait until the cluster is running.
-<img src="" alt="start cluster running"/>
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.2%20Creating%20a%20user/assets/crc%20start%20log.png" alt="start cluster running"/>
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.2%20Creating%20a%20user/assets/login1.png" alt="start cluster running"/>
 #### 2. Download apache2-utils.
 ```bash
 sudo apt install apache2-utils
@@ -16,9 +17,10 @@ login to ocp using admin :
 oc login <openshift URL> -u <openshift admin username> -p <openshift admin password>
 ```
 or copy login command from login ui :
-<img src="" alt="login1"/>
-<img src="" alt="login2"/>
-<img src="" alt="login3"/>
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.2%20Creating%20a%20user/assets/login0.png" alt="login0"/>
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.2%20Creating%20a%20user/assets/login1.png" alt="login1"/>
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.2%20Creating%20a%20user/assets/login2.png" alt="login2"/>
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.2%20Creating%20a%20user/assets/login3.png" alt="login3"/>
 
 first we need to get existing secret by running this command :
 ```bash
@@ -44,4 +46,4 @@ oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n op
 ```
 
 #### 5. Verify process by checking user management in openshift console.
-<img src="" alt="user-management"/>
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.2%20Creating%20a%20user/assets/user-management.png" alt="user-management"/>
