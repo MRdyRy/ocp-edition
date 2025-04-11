@@ -26,24 +26,24 @@ first we need to get existing secret by running this command :
 ```bash
 oc get secret htpass-secret -n openshift-config -o jsonpath='{.data.htpasswd}' | base64 -d > users.htpasswd
 ```
-<img src="" alt="get secret user"/>
 
 and then modify add new user by running this command :
 ```bash
 htpasswd -B -b users.htpasswd developer-dummy password123
 ```
-<img src="" alt="add new user"/>
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.2%20Creating%20a%20user/assets/Screenshot%20from%202025-04-11%2018-19-29.png" alt="add new user"/>
 
 check the data in users.htpasswd :
 ```bash
 nano users.htpasswd
 ```
-<img src="" alt="data user"/>
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.2%20Creating%20a%20user/assets/Screenshot%20from%202025-04-11%2018-19-43.png" alt="data user"/>
 
 #### 4. Apply the updated secret
 ```bash
 oc create secret generic htpass-secret --from-file=htpasswd=users.htpasswd -n openshift-config --dry-run=client -o yaml | oc apply -f -
 ```
+<img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.2%20Creating%20a%20user/assets/Screenshot%20from%202025-04-11%2018-23-47.png" alt="apply"/>
 
 #### 5. Verify process by checking user management in openshift console.
 <img src="https://github.com/MRdyRy/ocp-edition/blob/main/1.2%20Creating%20a%20user/assets/user-management.png" alt="user-management"/>
